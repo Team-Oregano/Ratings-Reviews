@@ -28,7 +28,7 @@ app.get('/reviews', function(req,res) {
 });
 
 app.get('/reviewphotos', function(req,res) {
-  getAllPhotos({review_id: "4"})
+  getAllPhotos({review_id: "5"})
   .then(data => {
     console.log(data);
     res.send(data);

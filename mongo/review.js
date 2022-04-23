@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 const db = require('./index.js');
 
+
+db.collection.createIndex({product_id: "1"})
+
 const reviewSchema = new mongoose.Schema(
   {
  _id: String,

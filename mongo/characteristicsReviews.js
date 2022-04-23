@@ -15,6 +15,6 @@ const CharacteristicsReviews = mongoose.model('CharacteristicsReviews', characte
 module.exports = CharacteristicsReviews;
 
 module.exports.getCharacteristicsReviews = function(id) {
-  return CharacteristicsReviews.find(id);
+  return CharacteristicsReviews.find(id).limit(100);
 }
 

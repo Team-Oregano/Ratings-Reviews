@@ -26,7 +26,15 @@ module.exports.getAllReviews = function(id) {
   return Review.find(id);
 }
 
-module.exports.createReview = function(obj) {
-  return Review.create({body: obj.body});
+module.exports.createReview = function(id, text) {
+  return Review.create({_id: id, body: text});
+}
+
+module.exports.reviewHelpful = function(id, boolean) {
+  return Review.findByIdAndUpdate({review_id, helpful: answer});
+}
+
+module.exports.reviewReport = function(id, boolean) {
+  return Review.FindByIdAndUpdate({review_id: id, report: answer});
 }
 

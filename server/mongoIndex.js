@@ -12,9 +12,6 @@ app.use(express.json());
 app.listen(3000, () => {console.log('server listening on port 3000')});
 
 
-// app.use(express.static(path.join(__dirname, "../client/dist")));
-
-
 app.get('/reviews/', function(req,res) {
   getAllReviews({})
   .then(data => {
@@ -89,8 +86,3 @@ app.put(`/reviews:id`,  function(req, res) {
   })
 })
 
-
-
-
-// app.listen(process.env.PORT);
-// console.log(`Listening at http://localhost:${process.env.PORT}`);

@@ -61,7 +61,7 @@ app.get('/characteristicsreviews', function(req,res) {
 });
 
 
-app.post(`/reviews:id`, function(req, res) {
+app.post(`/reviews`, function(req, res) {
   createReview({})
   .then(data => {
     console.log(data);
@@ -74,7 +74,7 @@ app.post(`/reviews:id`, function(req, res) {
 });
 
 
-app.put(`/reviews:id`,  function(req, res) {
+app.put(`/reviews`,  function(req, res) {
   reviewHelpful({})
   .then(data => {
       console.log(data);

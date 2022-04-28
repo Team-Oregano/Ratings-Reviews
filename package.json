@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "nodemon server/mongoIndex.js",
+    "start": "--unhandled-rejections=strict nodemon server/mongoIndex.js",
     "client-dev": "webpack --config ./webpack.config.js --mode development -w",
     "server-dev": "nodemon server/mongoIndex.js",
     "test": "jest"
